@@ -4,13 +4,8 @@ fn main() {
         a: i32,
         b: i32,
     }
-    if a % k == 0 || b % k == 0 {
-        println!("OK");
-        return;
-    }
-
-    let diff = b - a;
-    if ((b % k) - (a % k)) != diff {
+    let max_k = b / k * k;
+    if max_k >= a {
         println!("OK");
     } else {
         println!("NG");
